@@ -1,13 +1,33 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * _strlen - Return the qty f bytes that a string has
- * @r: The string that i choose
- * Return: The long of the string as an integer number
+ * swap_int - Swaps the values of two integers.
+ * @a: Pointer to the first integer.
+ * @b: Pointer to the second integer.
  */
-int _strlen(char *r)
+void swap_int(int *a, int *b)
 {
-int q = 0;
-while (*(r + q) != '\0')
-q++;
-return (q);
+int temp = *a;
+*a = *b;
+*b = temp;
+}
+
+/**
+ * main - Check the code.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+int a;
+int b;
+
+a = 98;
+b = 42;
+printf("a=%d, b=%d\n", a, b);
+swap_int(&a, &b);
+printf("a=%d, b=%d\n", a, b);
+return (0);
+}
 }
