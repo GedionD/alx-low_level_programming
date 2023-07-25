@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * swap_int - Updates the value of the parameter
@@ -9,7 +10,8 @@
  */
 void swap_int(int *a, int *b)
 {
-int temp;
+int m;
+m = *a;
 *a = *b;
-*b = temp;
+*b =  m;
 }
